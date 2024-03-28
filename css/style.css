@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body{
+    background-color: rgb(247, 246, 187);
+    /* perspective: 700px; */
+}
+section{
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Noto Sans Arabic", sans-serif;
+    transition: all 20s;
+}
+section h2{
+    color: rgb(17, 66, 50);
+    padding: 20px;
+    font-size: 30px;
+}
+section h2:hover{
+    transform: scale(2,2);
+}
+#bar{
+    width: 150px;
+    height: 2px;
+    border: 1px solid rgb(252, 220, 42);
+    border-radius: 5px;
+    background-color: rgb(252, 220, 42);
+    margin: auto;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.content{
+    overflow: auto;
+    /* margin: auto; */
+    perspective: 700px;
+}
+.item{
+    width: 15%;
+    height: 300px;
+    float: left;
+    padding: 30px;
+    background-color: rgb(135, 169, 34);
+    margin: 50px 30px;
+    border: 5px solid rgb(252, 220, 42);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 3s;
+}
+.item-img , .item-info{
+    width: 200px;
+    height: 300px;
+    padding: auto;
+    position: absolute;
+}
+.item-img{
+    /* background-color: rgb(135, 169, 34); */
+    z-index: 3;
+    /* display: none; */
+    backface-visibility: hidden;
+}
+.item-img img{
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgb(17, 66, 50);
+}
+.item-img h3{
+    padding: 20px 0px;
+    color: rgb(247, 246, 187);
+}
+.item-info{
+    background-color: rgb(252, 220, 42);
+    visibility: hidden;
+    transform: rotateY(180deg);
+}
+.item-info h5{
+    color: rgb(17, 66, 50);
+    text-decoration: underline;
+    font-size: 25px;
+}
+.item-info p{
+    color: rgb(135, 169, 34);
+    font-size: 20px;
+}
+.item:hover{
+    transform: rotateY(180deg);
+    border: 5px solid rgb(17, 66, 50);
+}
+.item:hover .item-info{
+    visibility: visible;
+}
