@@ -11,7 +11,7 @@ section{
     text-align: center;
     margin-top: 50px;
     font-family: "Noto Sans Arabic", sans-serif;
-    transition: all 20s;
+    transition: all 10s;
 }
 section h2{
     color: rgb(17, 66, 50);
@@ -49,6 +49,7 @@ section h2:hover{
     position: relative;
     transform-style: preserve-3d;
     transition: all 3s;
+    border-radius: 10px;
 }
 .item-img , .item-info{
     width: 200px;
@@ -57,15 +58,14 @@ section h2:hover{
     position: absolute;
 }
 .item-img{
-    /* background-color: rgb(135, 169, 34); */
     z-index: 3;
-    /* display: none; */
     backface-visibility: hidden;
 }
 .item-img img{
     width: 200px;
     height: 200px;
     border: 3px solid rgb(17, 66, 50);
+    border-radius: 5px;
 }
 .item-img h3{
     padding: 20px 0px;
@@ -73,7 +73,10 @@ section h2:hover{
 }
 .item-info{
     background-color: rgb(252, 220, 42);
-    visibility: hidden;
+    border: 3px solid rgb(247, 246, 187);
+    border-radius: 5px;
+    backface-visibility: hidden;
+    /* visibility: hidden; */
     transform: rotateY(180deg);
 }
 .item-info h5{
@@ -89,6 +92,6 @@ section h2:hover{
     transform: rotateY(180deg);
     border: 5px solid rgb(17, 66, 50);
 }
-.item:hover .item-info{
+/* .item:hover .item-info{
     visibility: visible;
-}
+} */
